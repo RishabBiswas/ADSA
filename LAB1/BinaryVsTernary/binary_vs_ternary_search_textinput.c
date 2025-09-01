@@ -79,7 +79,9 @@ int main() {
     printf("Enter the value of key\n");
     scanf("%d", &key);
     printf("%d\n",key);
-
+    
+    comparison2=0;
+    comparison3=0;      
     int index2 = binarysearch(arr, 0, n - 1, key);
     int index3 = ternarysearch(arr, 0, n - 1, key);
     printf("%d\n",index2);

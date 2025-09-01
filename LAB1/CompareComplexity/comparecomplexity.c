@@ -65,22 +65,39 @@ int main() {
         printf("%d ", ptr[i]);
     printf("\n\n");
 
+    for (int n = 0; n < maxn; n++)
+    {printf("n=%d %f\n", ptr[n], fun1(ptr[n]));
+     printf("n=%d %f\n", ptr[n], fun2(ptr[n]));
+     printf("n=%d %f\n", ptr[n], fun3(ptr[n]));
+     printf("n=%d %f\n", ptr[n], fun4(ptr[n]));
+     printf("n=%d %f\n", ptr[n], fun5(ptr[n]));
+     printf("n=%d %f\n", ptr[n], fun6(ptr[n]));
+     printf("n=%d %f\n", ptr[n], fun7(ptr[n]));
+     printf("n=%d %f\n", ptr[n], fun8(ptr[n]));
+     printf("n=%d %f\n", ptr[n], fun9(ptr[n]));
+     printf("n=%d %f\n", ptr[n], fun10(ptr[n]));
+     printf("n=%d %f\n", ptr[n], fun11(ptr[n]));
+     printf("n=%d %f\n", ptr[n], fun12(ptr[n]));
+     printf("\n\n\n");
     
-    for (int n = 1; n <= maxn; n++) {fprintf(gp, "%d %f\n", ptr[n], fun1(ptr[n]));} fprintf(gp, "e\n");
-    for (int n = 1; n <= maxn; n++) {fprintf(gp, "%d %f\n", ptr[n], fun2(ptr[n]));} fprintf(gp, "e\n");
-    for (int n = 1; n <= maxn; n++) {fprintf(gp, "%d %f\n", ptr[n], fun2(ptr[n]));} fprintf(gp, "e\n");
-    for (int n = 1; n <= maxn; n++) {fprintf(gp, "%d %f\n", ptr[n], fun2(ptr[n]));} fprintf(gp, "e\n");
-    for (int n = 1; n <= maxn; n++) {fprintf(gp, "%d %f\n", ptr[n], fun2(ptr[n]));} fprintf(gp, "e\n");
-    for (int n = 1; n <= maxn; n++) {fprintf(gp, "%d %f\n", ptr[n], fun3(ptr[n]));} fprintf(gp, "e\n");
-    for (int n = 1; n <= maxn; n++) {fprintf(gp, "%d %f\n", ptr[n], fun4(ptr[n]));} fprintf(gp, "e\n");
-    for (int n = 1; n <= maxn; n++) {fprintf(gp, "%d %f\n", ptr[n], fun5(ptr[n]));} fprintf(gp, "e\n");
-    for (int n = 1; n <= maxn; n++) {fprintf(gp, "%d %f\n", ptr[n], fun6(ptr[n]));} fprintf(gp, "e\n");
-    for (int n = 1; n <= maxn; n++) {fprintf(gp, "%d %f\n", ptr[n], fun7(ptr[n]));} fprintf(gp, "e\n");
-    for (int n = 1; n <= maxn; n++) {fprintf(gp, "%d %f\n", ptr[n], fun8(ptr[n]));} fprintf(gp, "e\n");
-    for (int n = 1; n <= maxn; n++) {fprintf(gp, "%d %f\n", ptr[n], fun9(ptr[n]));} fprintf(gp, "e\n");
-    for (int n = 1; n <= maxn; n++) {fprintf(gp, "%d %f\n", ptr[n], fun10(ptr[n]));} fprintf(gp, "e\n");
-    for (int n = 1; n <= maxn; n++) {fprintf(gp, "%d %f\n", ptr[n], fun11(ptr[n]));} fprintf(gp, "e\n");
-    for (int n = 1; n <= maxn; n++) {fprintf(gp, "%d %f\n", ptr[n], fun12(ptr[n]));} fprintf(gp, "e\n");
+    }
+
+    
+    for (int n = 0; n < maxn; n++) {fprintf(gp, "%d %f\n", ptr[n], fun1(ptr[n]));} fprintf(gp, "e\n");
+    for (int n = 0; n < maxn; n++) {fprintf(gp, "%d %f\n", ptr[n], fun2(ptr[n]));} fprintf(gp, "e\n");
+    for (int n = 0; n < maxn; n++) {fprintf(gp, "%d %f\n", ptr[n], fun2(ptr[n]));} fprintf(gp, "e\n");
+    for (int n = 0; n < maxn; n++) {fprintf(gp, "%d %f\n", ptr[n], fun2(ptr[n]));} fprintf(gp, "e\n");
+    for (int n = 0; n < maxn; n++) {fprintf(gp, "%d %f\n", ptr[n], fun2(ptr[n]));} fprintf(gp, "e\n");
+    for (int n = 0; n < maxn; n++) {fprintf(gp, "%d %f\n", ptr[n], fun3(ptr[n]));} fprintf(gp, "e\n");
+    for (int n = 0; n < maxn; n++) {fprintf(gp, "%d %f\n", ptr[n], fun4(ptr[n]));} fprintf(gp, "e\n");
+    for (int n = 0; n < maxn; n++) {fprintf(gp, "%d %f\n", ptr[n], fun5(ptr[n]));} fprintf(gp, "e\n");
+    for (int n = 0; n < maxn; n++) {fprintf(gp, "%d %f\n", ptr[n], fun6(ptr[n]));} fprintf(gp, "e\n");
+    for (int n = 0; n < maxn; n++) {fprintf(gp, "%d %f\n", ptr[n], fun7(ptr[n]));} fprintf(gp, "e\n");
+    for (int n = 0; n < maxn; n++) {fprintf(gp, "%d %f\n", ptr[n], fun8(ptr[n]));} fprintf(gp, "e\n");
+    for (int n = 0; n < maxn; n++) {fprintf(gp, "%d %f\n", ptr[n], fun9(ptr[n]));} fprintf(gp, "e\n");
+    for (int n = 0; n < maxn; n++) {fprintf(gp, "%d %f\n", ptr[n], fun10(ptr[n]));} fprintf(gp, "e\n");
+    for (int n = 0; n < maxn; n++) {fprintf(gp, "%d %f\n", ptr[n], fun11(ptr[n]));} fprintf(gp, "e\n");
+    for (int n = 0; n < maxn; n++) {fprintf(gp, "%d %f\n", ptr[n], fun12(ptr[n]));} fprintf(gp, "e\n");
 
     pclose(gp);
     return 0;

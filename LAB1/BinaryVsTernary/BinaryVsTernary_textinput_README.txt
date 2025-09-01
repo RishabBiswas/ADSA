@@ -18,5 +18,6 @@ plot "output.dat" using 1:2 with linespoints title "Binary Search", \
 
 
 
-Run Terminal and run command gnuplot -p plot.gp
+Run Terminal and run command gnuplot -p plot.gp to plot graph between n and No. of Binary and Ternary Comparisons.
+
 
