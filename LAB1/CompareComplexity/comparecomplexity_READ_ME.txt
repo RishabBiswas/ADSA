@@ -4,4 +4,4 @@ Once the input(No of array Elements) is given, It takes array elements(n) as inp
 
 The Function values are plotted against n.
 
-The graph is used for arranging the functions in increasing order.
+The graph can be used for arranging the functions in increasing order.
