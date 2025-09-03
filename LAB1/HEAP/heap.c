@@ -1,5 +1,10 @@
 #include <stdio.h>
 
+#define MAX 100   // maximum size of heap
+
+int heap[MAX];
+int heapSize = 0;
+
 // Function to swap two elements
 void swap(int *a, int *b) {
     int temp = *a;
@@ -7,65 +12,53 @@ void swap(int *a, int *b) {
     *b = temp;
 }
 
-// To heapify a subtree rooted with node i, size of heap = n
-void heapify(int arr[], int n, int i) {
-    int largest = i;         // Initialize largest as root
-    int left = 2 * i + 1;    // left child = 2*i + 1
-    int right = 2 * i + 2;   // right child = 2*i + 2
+// Heapify Down (to maintain min heap property)
+void heapifydown(int index, int n) {
+    int left = 2 * index;
+    int right = 2 * index + 1;
+    int smallest = index;
 
-    // If left child is larger than root
-    if (left < n && arr[left] > arr[largest])
-        largest = left;
+    if (left <= n && heap[left] < heap[smallest])
+        smallest = left;
 
-    // If right child is larger than largest so far
-    if (right < n && arr[right] > arr[largest])
-        largest = right;
+    if (right <= n && heap[right] < heap[smallest])
+        smallest = right;
 
-    // If largest is not root
-    if (largest != i) {
-        swap(&arr[i], &arr[largest]);
-        // Recursively heapify the affected subtree
-        heapify(arr, n, largest);
+    if (smallest != index) {
+        swap(&heap[index], &heap[smallest]);
+        heapifydown(smallest, n);
     }
 }
 
-// Main function to do heap sort
-void heapSort(int arr[], int n) {
-    // Build max heap
-    for (int i = n / 2 - 1; i >= 0; i--)
-        heapify(arr, n, i);
-
-    // Extract elements one by one
-    for (int i = n - 1; i > 0; i--) {
-        swap(&arr[0], &arr[i]); // Move current root to end
-        heapify(arr, i, 0);     // Heapify reduced heap
+// Print heap
+void printheap(int n) {
+    for (int i = 1; i <= n; i++) {
+        printf("%d ", heap[i]);
     }
-}
-
-// Function to print array
-void printArray(int arr[], int n) {
-    for (int i = 0; i < n; i++)
-        printf("%d ", arr[i]);
     printf("\n");
 }
 
 int main() {
     int n;
-    printf("Enter number of elements: ");
+
+    printf("Enter the no. of elements to be inserted in heap\n");
     scanf("%d", &n);
+    printf("Enter Heap elements:\n");
+    for (int i = 1; i <= n; i++) {   // start from index 1
+        scanf("%d", &heap[i]);
+    }
 
-    int arr[n];  // Variable length array 
-    printf("Enter %d elements:\n", n);
-    for (int i = 0; i < n; i++)
-        scanf("%d", &arr[i]);
+    printf("Inserted Heap (Array):\n");
+    printheap(n);
 
-    printf("Original array: ");
-    printArray(arr, n);
+    // Build heap by calling heapifydown from n/2 to 1
+    for (int j = n / 2; j >= 1; j--) {
+        heapifydown(j, n);
+    }
 
-    heapSort(arr, n);
-
-    printf("Sorted array:   ");
-    printArray(arr, n);
+    printf("Heapified Heap (Min-Heap):\n");
+    printheap(n);
 
     return 0;
 }
+

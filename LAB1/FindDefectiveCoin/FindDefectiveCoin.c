@@ -47,7 +47,7 @@ int FindDefectiveCoin(int arr[], int low, int high) {
         if (arr[low] < arr[high]) return low;
         else if (arr[high] < arr[low]) return high;
         else return -1; 
-    }
+    }                                                                
 
     int n = high - low + 1;
     int mid = (low + high) / 2;
@@ -59,7 +59,8 @@ int FindDefectiveCoin(int arr[], int low, int high) {
         if (result == -1) return FindDefectiveCoin(arr, low, mid);
         else if (result == 1) return FindDefectiveCoin(arr, mid+1, high);
         else return -1;
-        
+    }
+    else{
         int result = compareweigh(arr, low, mid-1, mid, high-1);
 
         if (result == -1) return FindDefectiveCoin(arr, low, mid-1);
@@ -69,7 +70,8 @@ int FindDefectiveCoin(int arr[], int low, int high) {
             if (arr[high] < arr[low]) return high;
             else return -1;  
         }
-    }
+        }
+    
 }
 
 int compareweigh(int arr[],int r1,int l1,int r2,int l2)
@@ -89,5 +91,6 @@ int compareweigh(int arr[],int r1,int l1,int r2,int l2)
     {
         return 1;
     }
+    else
     return 0;
 }
