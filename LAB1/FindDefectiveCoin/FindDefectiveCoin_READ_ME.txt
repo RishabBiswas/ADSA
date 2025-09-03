@@ -8,6 +8,13 @@ There are a few “constant” checks outside the halving:
 
 If n is odd, sometimes you need 1 extra weighing to test the leftover coin.
 
+
 If all coins are equal, you might need 1 more check to confirm “no defective coin.”
 
 Therefore the time complexity comes as log(n)(base 2) + constant(C) 
+
+How to Use:
+Input the number of coins when prompted.
+Enter the weight of each coin.
+The program will output the index (0-based) of the defective lighter coin if found.
+If all coins are of equal weight, it reports no defective coin.
